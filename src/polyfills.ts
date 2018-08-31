@@ -78,3 +78,17 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+/***************************************************************************************************
+ * JQuery is required by Pratt Bootstrap theme.
+ */
+import 'jquery/dist/jquery.min';  // Not included with Angular CLI.
+
+/***************************************************************************************************
+ * Bootstrap is required by Pratt Bootstrap theme.
+ */
+import 'bootstrap/dist/js/bootstrap.min';  // Not included with Angular CLI.
+
+/***************************************************************************************************
+ * Smoothscroll is required by Pratt Bootstrap theme.
+ */
+import 'smoothscroll/smoothscroll.min';  // Not included with Angular CLI.
