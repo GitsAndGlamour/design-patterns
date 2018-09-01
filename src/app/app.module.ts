@@ -8,6 +8,7 @@ import { ArticleComponent } from './article/article.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './header/nav/nav.component';
 import { PageNotFoundComponent } from './page.not.found.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PageNotFoundComponent } from './page.not.found.component';
     PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

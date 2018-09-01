@@ -1,3 +1,7 @@
-<p>
-  nav works!
-</p>
+<nav>
+  <!--TODO: Logo-->
+  <a routerLink="/home">Home</a>
+  <!--TODO: Search-->
+  <a routerLink="/account" *ngIf="auth.url == 'login'">Account</a>
+  <a routerLink="/{{auth.url}}" (click)="toggleAuth()">{{auth.buttonText}}</a>
+</nav>
