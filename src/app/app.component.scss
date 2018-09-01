@@ -1,9 +1,9 @@
-.container-fluid {
+.content {
   display: flex;
  main {
-    flex-grow: 4;
+    flex-grow: 1;
   }
   app-article {
-    flex-grow: 1;
+    flex-grow: 0;
   }
 }

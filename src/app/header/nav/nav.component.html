@@ -1,7 +1,22 @@
-<nav>
-  <!--TODO: Logo-->
-  <a routerLink="/home">Home</a>
-  <!--TODO: Search-->
-  <a routerLink="/account" *ngIf="auth.url == 'login'">Account</a>
-  <a routerLink="/{{auth.url}}" (click)="toggleAuth()">{{auth.buttonText}}</a>
+<nav class="navbar navbar-expand-lg">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <!--TODO: More Tabs -->
+      <li class="nav-item" [ngClass]="{'active': true}">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Theme</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+      </li>
+      <!--TODO: Account <a class="nav-link" routerLink="/account" *ngIf="auth.url == 'login'">Account</a>-->
+      <!--TODO: Auth <a class="nav-link" routerLink="/{{auth.url}}" (click)="toggleAuth()">{{auth.buttonText}}</a>-->
+    </ul>
+  </div>
 </nav>
