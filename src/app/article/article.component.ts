@@ -85,10 +85,7 @@ export class ArticleComponent implements OnInit {
   }
   selectTab(tab: string, sub?: boolean) {
     this.selectedTab = tab;
-    console.log(this.selectedTab.indexOf(tab) > -1);
-    console.log(tab);
     if (sub) {
-      console.log(tab + ' SUB');
       this.selectedSubTab = tab;
     }
   }

@@ -6,7 +6,8 @@ import { MainComponent } from './main/main.component';
 const routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: MainComponent },
-  { path: 'display-pattern/:tab/:sub', component: MainComponent, pathMatch: 'full' }
+  { path: 'display-pattern/:tab', component: PatternComponent, pathMatch: 'full' },
+  { path: 'display-pattern/:tab/:sub', component: PatternDetailComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
