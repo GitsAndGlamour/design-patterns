@@ -1,0 +1,6 @@
+<div class="container-fluid" [ngSwitch]="tab">
+  <app-creational *ngSwitchCase="'creational'"   [sub]="sub"></app-creational>
+  <app-structural *ngSwitchCase="'structural'"   [sub]="sub"></app-structural>
+  <app-behavioral *ngSwitchCase="'behavioral'"   [sub]="sub"></app-behavioral>
+  <app-concurrency *ngSwitchCase="'concurrency'" [sub]="sub"></app-concurrency>
+</div>

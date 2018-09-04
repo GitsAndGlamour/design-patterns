@@ -4,18 +4,18 @@
       <a class="navbar-brand" routerLink="/home">Design Patterns</a>
     </li>
       <li class="nav-item">
-        <form>
+        <div class="search-bar">
           <input class="form-control" type="text" placeholder="Search">
-          <button class="btn btn-secondary" type="submit">
+          <button class="btn btn-secondary">
             <i class="fas fa-search"></i>
           </button>
-        </form>
+        </div>
       </li>
       <br>
       <li class="dropdown-divider"></li>
       <li class="nav-item main-nav-item" *ngFor="let tab of tabs" [ngClass]="{'active': selectedTab.indexOf(tab.url) > -1}" (click)="selectTab(tab.url)">
         <div class="" id="{{tab.url}}" data-toggle="collapse" [attr.data-target]="'#body-'+tab.url" aria-expanded="false" [attr.aria-controls]="'body-'+tab.url">
-            <a class="nav-link" routerLink="/display-pattern/{{tab.url}}">
+            <a class="nav-link" routerLink="/design-pattern/{{tab.url}}/main">
               <h5>{{tab.name}}</h5>
             </a>
         </div>
@@ -23,7 +23,7 @@
       <div id="body-{{tab.url}}" class="collapse show" [attr.aria-labelledby]="tab.url" data-parent="#accordion">
           <ul class="sub-navbar navbar-nav flex-column">
             <li class="nav-item" *ngFor="let sub of tab.subs" [ngClass]="{'active': selectedSubTab.indexOf(tab.url+'/'+sub.url) > -1}" (click)="selectTab(tab.url+'/'+sub.url, true)">
-              <a class="nav-link" routerLink="/display-pattern/{{tab.url}}/{{sub.url}}">{{sub.name}}</a>
+              <a class="nav-link" routerLink="/design-pattern/{{tab.url}}/{{sub.url}}">{{sub.name}}</a>
             </li>
           </ul>
       </div>

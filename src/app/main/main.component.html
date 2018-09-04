@@ -1,3 +1,214 @@
-<span>
-  main works!
-</span>
+<div class="container-fluid">
+  <h1>Design Patterns</h1>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="##" [ngClass]="{'active':tab === 'uses'}" (click)="selectTab('uses')">Uses of Design Patterns</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="##" [ngClass]="{'active':tab === 'creative'}" (click)="selectTab('creative')">Creative</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="##" [ngClass]="{'active':tab === 'structural'}" (click)="selectTab('structural')">Structural</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="##" [ngClass]="{'active':tab === 'behavioral'}" (click)="selectTab('behavioral')">Behavioral</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="##" [ngClass]="{'active':tab === 'concurrency'}" (click)="selectTab('concurrency')">Concurrency</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="##" [ngClass]="{'active':tab === 'criticisms'}" (click)="selectTab('criticisms')">Criticisms</a>
+    </li>
+  </ul>
+<div *ngIf="tab === 'uses'">
+  <h2>Uses of Design Patterns</h2>
+  <p>
+    In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software design. A design pattern isn't a finished design that can be transformed directly into code. It is a description or template for how to solve a problem that can be used in many different situations.
+  </p>
+  <p>
+    Design patterns can speed up the development process by providing tested, proven development paradigms. Effective software design requires considering issues that may not become visible until later in the implementation. Reusing design patterns helps to prevent subtle issues that can cause major problems and improves code readability for coders and architects familiar with the patterns.
+  </p>
+  <p>
+    Often, people only understand how to apply certain software design techniques to certain problems. These techniques are difficult to apply to a broader range of problems. Design patterns provide general solutions, documented in a format that doesn't require specifics tied to a particular problem.
+  </p>
+  <p>
+    In addition, patterns allow developers to communicate using well-known, well understood names for software interactions. Common design patterns can be improved over time, making them more robust than ad-hoc designs.
+  </p>
+</div>
+  <div *ngIf="tab === 'creative'">
+    <h2>
+      Creational design patterns
+    </h2>
+    <p>
+      These design patterns are all about class instantiation. This pattern can be further divided into class-creation patterns and object-creational patterns. While class-creation patterns use inheritance effectively in the instantiation process, object-creation patterns use delegation effectively to get the job done.
+    </p>
+    <br>
+    <p><b>Abstract Factory</b>
+      <br>Creates an instance of several families of classes
+    </p>
+    <p><b>Builder</b>
+      <br>Separates object construction from its representation
+    </p>
+    <p><b>Factory Method</b>
+      <br>Creates an instance of several derived classes
+    </p>
+    <p><b>Object Pool</b>
+      <br>Avoid expensive acquisition and release of resources by recycling objects that are no longer in use
+    </p>
+    <p><b>Prototype</b>
+      <br>A fully initialized instance to be copied or cloned
+    </p>
+    <p><b>Singleton</b>
+      <br>A class of which only a single instance can exist
+    </p>
+    <br>
+    <br>
+</div>
+  <div *ngIf="tab === 'structural'">
+
+    <h2>Structural design patterns</h2>
+    <p>
+      These design patterns are all about Class and Object composition. Structural class-creation patterns use inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new functionality.
+    <p><b>Adapter</b>
+      <br>Match interfaces of different classes
+    </p>
+    <p><b>Bridge</b>
+      <br>Separates an object’s interface from its implementation
+    </p>
+    <p><b>Composite</b>
+      <br>A tree structure of simple and composite objects
+    </p>
+    <p><b>Decorator</b>
+      <br>Add responsibilities to objects dynamically
+    </p>
+    <p><b>Facade</b>
+      <br>A single class that represents an entire subsystem
+    </p>
+    <p><b>Flyweight</b>
+      <br>A fine-grained instance used for efficient sharing
+    </p>
+    <p><b>Private Class Data</b>
+      <br>Restricts accessor/mutator access
+    </p>
+    <p><b>Proxy</b>
+      <br>An object representing another object
+    </p>
+    <br>
+    <br>
+</div>
+  <div *ngIf="tab === 'behavioral'">
+    <h2>
+      Behavioral design patterns
+    </h2>
+    <p>
+      These design patterns are all about Class's objects communication. Behavioral patterns are those patterns that are most specifically concerned with communication between objects.
+    </p>
+    <p><b>Chain of responsibility</b>
+      <br>A way of passing a request between a chain of objects
+    <p><b>Command</b>
+      <br>Encapsulate a command request as an object
+    </p>
+    <p><b>Interpreter</b>
+      <br>A way to include language elements in a program
+    </p>
+    <p><b>Iterator</b>
+      <br>Sequentially access the elements of a collection
+    </p>
+    <p><b>Mediator</b>
+      <br>Defines simplified communication between classes
+    </p>
+    <p><b>Memento</b>
+      <br>Capture and restore an object's internal state
+    </p>
+    <p><b>Null Object</b>
+      <br>Designed to act as a default value of an object
+    </p>
+    <p><b>Observer</b>
+      <br>A way of notifying change to a number of classes
+    </p>
+    <p><b>State</b>
+      <br>Alter an object's behavior when its state changes
+    </p>
+    <p><b>Strategy</b>
+      <br>Encapsulates an algorithm inside a class
+    <p><b>Template method</b>
+      <br>Defer the exact steps of an algorithm to a subclass
+    </p>
+    <p><b>Visitor</b>
+      <br>Defines a new operation to a class without change
+    </p>
+    <br>
+    <br>
+  </div>
+  <div *ngIf="tab === 'concurrency'">
+    <h2>
+      Concurrency design patterns
+    </h2>
+    <p><b>Active Object</b>
+      <br>Decouples method execution from method invocation that reside in their own thread of control. The goal is to introduce concurrency, by using asynchronous method invocation and a scheduler for handling requests.
+    </p>
+    <p><b>Balking</b>
+      <br>Only execute an action on an object when the object is in a particular state.
+    </p>
+    <p><b>Binding properties</b>
+      <br>Combining multiple observers to force properties in different objects to be synchronized or coordinated in some way.
+    </p>
+    <p><b>Compute kernel</b>
+      <br>The same calculation many times in parallel, differing by integer parameters used with non-branching pointer math into shared arrays, such as GPU-optimized Matrix multiplication or Convolutional neural network.
+    </p>
+    <p><b>Double-checked locking</b>
+      <br>Reduce the overhead of acquiring a lock by first testing the locking criterion (the 'lock hint') in an unsafe manner; only if that succeeds does the actual locking logic proceed.
+      <br>Can be unsafe when implemented in some language/hardware combinations. It can therefore sometimes be considered an anti-pattern.
+    </p>
+    <p><b>Event-based asynchronous</b>
+      <br>Addresses problems with the asynchronous pattern that occur in multithreaded programs.
+    </p>
+    <p><b>Guarded suspension</b>
+      <br>Manages operations that require both a lock to be acquired and a precondition to be satisfied before the operation can be executed.
+    </p>
+    <p><b>Join</b><br>
+      Join-pattern provides a way to write concurrent, parallel and distributed programs by message passing. Compared to the use of threads and locks, this is a high-level programming model.
+    </p>
+    <p><b>Lock</b><br>
+      One thread puts a "lock" on a resource, preventing other threads from accessing or modifying it.[23]	No	PoEAA[14]
+    </p>
+    <p><b>Messaging design pattern (MDP)</b><br>
+      Allows the interchange of information (i.e. messages) between components and applications.
+    </p>
+    <p><b>Monitor object</b><br>
+      An object whose methods are subject to mutual exclusion, thus preventing multiple objects from erroneously trying to use it at the same time.
+    </p>
+    <p><b>Reactor</b><br>
+      A reactor object provides an asynchronous interface to resources that must be handled synchronously.
+    </p>
+    <p><b>Read-write lock</b><br>
+      Allows concurrent read access to an object, but requires exclusive access for write operations.
+    </p>
+    <p><b>Scheduler</b><br>
+      Explicitly control when threads may execute single-threaded code.
+    </p>
+    <p><b>Thread pool</b><br>
+      A number of threads are created to perform a number of tasks, which are usually organized in a queue. Typically, there are many more tasks than threads. Can be considered a special case of the object pool pattern.
+    </p>
+    <p><b>Thread-specific storage</b><br>
+      Static or "global" memory local to a thread.
+    </p>
+  </div>
+  <div *ngIf="tab === 'criticisms'">
+    <h2>Criticism</h2>
+    <p>The concept of design patterns has been criticized by some in the field of computer science.</p>
+
+    <p><b>Targets the wrong problem</b><br>
+      The need for patterns results from using computer languages or techniques with insufficient abstraction ability. Under ideal factoring, a concept should not be copied, but merely referenced. But if something is referenced instead of copied, then there is no "pattern" to label and catalog. Paul Graham writes in the essay Revenge of the Nerds.</p>
+    <p>Peter Norvig provides a similar argument. He demonstrates that 16 out of the 23 patterns in the Design Patterns book (which is primarily focused on C++) are simplified or eliminated (via direct language support) in Lisp or Dylan.</p>
+
+    <p><b>Lacks formal foundations</b><br>
+      The study of design patterns has been excessively ad hoc, and some have argued that the concept sorely needs to be put on a more formal footing. At OOPSLA 1999, the Gang of Four were (with their full cooperation) subjected to a show trial, in which they were "charged" with numerous crimes against computer science. They were "convicted" by ⅔ of the "jurors" who attended the trial.</p>
+
+    <p><b>Leads to inefficient solutions</b><br>
+      The idea of a design pattern is an attempt to standardize what are already accepted best practices. In principle this might appear to be beneficial, but in practice it often results in the unnecessary duplication of code. It is almost always a more efficient solution to use a well-factored implementation rather than a "just barely good enough" design pattern.</p>
+
+    <p><b>Does not differ significantly from other abstractions</b><br>
+      Some authors allege that design patterns don't differ significantly from other forms of abstraction, and that the use of new terminology (borrowed from the architecture community) to describe existing phenomena in the field of programming is unnecessary. The Model-View-Controller paradigm is touted as an example of a "pattern" which predates the concept of "design patterns" by several years. It is further argued by some that the primary contribution of the Design Patterns community (and the Gang of Four book) was the use of Alexander's pattern language as a form of documentation; a practice which is often ignored in the literature.
+  </div>
+  </div>

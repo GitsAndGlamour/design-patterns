@@ -22,7 +22,7 @@ export class ArticleComponent implements OnInit {
     this.selectedSubTab = window.location.pathname;
     this.tabs = [
       {url: 'creational', name: 'Creational', subs: [
-          {url: 'abstract', name: 'Abstract'},
+          {url: 'abstract-factory', name: 'Abstract Factory'},
           {url: 'builder', name: 'Builder'},
           {url: 'dependency-injection', name: 'Dependency Injection'},
           {url: 'factory', name: 'Factory'},

@@ -6,21 +6,24 @@ form {
     width: 200px;
   }
 }
+h5 {
+  color: white;
+}
 .main-nav-item.active .nav-link {
-  color: black;
   font-weight: bolder;
 }
 .sub-navbar {
   margin-left: 1rem;
   .nav-link {
-    color: rgba(255,255,255,0.8) !important;
     font-weight: lighter !important;
   }
-  .nav-link:hover {
-    color: white;
-  }
+  .nav-link:hover,
   .active .nav-link {
     font-weight: bold !important;
-    color: white !important;
   }
+}
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
 }
